@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Our Wedding</title>
+    <link rel="stylesheet" href="./src/all.min.css" />
+    <link
+      rel="shortcut icon"
+      href="./src/assets/OIP (1).jfif"
+      type="image/x-icon"
+    />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Great+Vibes&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="container 2xl:w-7xl mx-auto">
+      <!-- envelope -->
+      <div
+        class="relative mx-auto bg-[#E5D7C7] top-0 shadow-2xl overflow-hidden"
+        id="envelope"
+      >
+        <div class="absolute w-full shadow-2xl rounded-md"></div>
+
+        <div
+          class="absolute inset-0 bg-[#C9BFB1]"
+          id="topFlap"
+          style="clip-path: polygon(0 0, 100% 0, 50% 100%)"
+        ></div>
+
+        <div
+          id="bottomFlap"
+          class="absolute inset-0 bg-[#D2CAC2] z-10"
+          style="clip-path: polygon(0 100%, 100% 100%, 50% 50%)"
+        ></div>
+
+        <div
+          id="leftFlap"
+          class="absolute inset-0 bg-[#D2CAC2] z-10"
+          style="clip-path: polygon(0 0, 0 100%, 50% 50%)"
+        ></div>
+
+        <div
+          id="rightFlap"
+          class="absolute inset-0 bg-[#D2CAC2] z-10"
+          style="clip-path: polygon(100% 0, 100% 100%, 50% 50%)"
+        ></div>
+        <div class="flex justify-center items-center">
+          <div
+            id="clickedButton"
+            class="absolute cursor-pointer border-2 z-50 border-[#CAC1B3] flex justify-center items-center rounded-3xl w-[65px] h-[65px] bg-[#D2CAC2]"
+          >
+            <div
+              id="flowerImg"
+              class="border-2 border-[#CAC1B3] rounded-full overflow-hidden w-[50px] h-[50px]"
+            >
+              <img
+                src="./src/assets/OIP (1).jfif"
+                class="w-full h-full object-cover rounded-full z-40"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            id="card"
+            class="flex flex-col justify-center relative z-30 items-center h-lvh font-bold text-[#a69277] top-25"
+          >
+            <h1 class="text-3xl">This invitation exclusive for you</h1>
+            <h2 class="font-bold text-2xl">Hesham & Hadeel</h2>
+          </div>
+        </div>
+      </div>
+      <!-- main content -->
+      <div id="mainContent" class="bg-[#E6D8C8] hidden">
+        <!-- begin -->
+        <div class="h-lvh">
+          <div
+            class="music-btn border-4 rounded-2xl cursor-pointer z-50 bg-[#F6E8D7] fixed top-5 flex justify-center items-center p-4 border-[#a69277]"
+            id="musicBtn"
+          >
+            <i class="fa-solid fa-play text-[#a69277] size-4"></i>
+          </div>
+          <audio id="music">
+            <source
+              src="./Albumaty.Com.Mahmoud.El.Esseily.Farha.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+          <img
+            src="./src/assets/first.png"
+            class="w-full h-lvh object-center rounded-2xl rounded-t-none"
+            alt="weeding place"
+          />
+        </div>
+        <!-- card -->
+
+        <div class="mt-5 relative flex justify-center items-center">
+          <img src="./src/assets/card.png" class="rounded-2xl w-full" />
+          <h3
+            class="absolute fade-up text-center text-2xl text-[#A69277] font-bold w-1/2 lg:text-4xl"
+          >
+            Together with their families request the honor of your presence at
+            the wedding celebration of.<br />
+            Hesham & Hadeel<br />
+            Your presence will make our day truly special.
+          </h3>
+        </div>
+        <!-- date title -->
+        <div class="flex justify-center text-[#a69277] font-bold">
+          <h2
+            class="text-3xl shadow-2xl border-2 border-[#F5E7D8] bg-[#F5E7D8] hover:scale-110 transition-all duration-500 rounded-2xl p-5 my-2"
+          >
+            Wedding Date & Time
+          </h2>
+        </div>
+        <!-- date slider  -->
+        <div
+          class="relative w-[90%] mx-auto overflow-hidden bg-[#F5E6D6] rounded-2xl"
+        >
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <img
+                  src="./src/assets/clock.png"
+                  class="w-full mx-auto md:w-1/2 object-cover"
+                />
+                <div class="bg-[#F3E4D4] text-center">
+                  <h3 class="text-2xl text-[#a69277] font-bold">6 PM</h3>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide rounded-2xl">
+                <img
+                  src="./src/assets/calender.png"
+                  class="w-full mx-auto md:w-1/2 object-cover"
+                />
+                <div class="bg-[#F3E4D4] text-center">
+                  <h3 class="text-2xl text-[#a69277] font-bold text-center">
+                    16.10.2026
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- map -->
+        <div
+          class="flex flex-col items-center justify-center mt-5 text-[#a69277] bg-[#F5E7D8] w-[90%] mx-auto rounded-2xl py-2"
+        >
+          <h2
+            class="text-3xl shadow-2xl rounded-2xl p-5 my-2 font-bold text-center"
+          >
+            The venue <i class="fa-solid fa-location-dot"></i>
+          </h2>
+          <h3 class="font-bold text-xl py-7">The garden,New cairo</h3>
+          <button
+            id="mapButton"
+            class="text-2xl shadow-2xl cursor-pointer border-2 font-bold border-[#F5E7D8] bg-[#F5E7D8] hover:scale-110 transition-all duration-500 rounded-2xl px-5 py-2 my-2"
+          >
+            Click for location
+          </button>
+        </div>
+      
+
+        <!-- countdown -->
+        <div
+          class="mt-5 py-2 flex flex-col items-center justify-center w-[90%] mx-auto rounded-2xl text-[#a69277] font-bold bg-[#F5E7D8]"
+        >
+          <h2
+            class="text-3xl shadow-2xl hover:scale-110 transition-all duration-500 rounded-2xl p-5 my-2"
+          >
+            Days left for the big day
+            <i class="fa-regular fa-hourglass-half text-[#a69277]"></i>
+          </h2>
+          <div
+            id="countdown"
+            class="flex gap-5 py-7 justify-center text-center text-[#a69277] font-bold text-2xl"
+          >
+            <div>
+              <h2 id="days">00</h2>
+              <p>Days</p>
+            </div>
+
+            <div>
+              <h2 id="hours">00</h2>
+              <p>Hours</p>
+            </div>
+
+            <div>
+              <h2 id="minutes">00</h2>
+              <p>Minutes</p>
+            </div>
+
+            <div>
+              <h2 id="seconds">00</h2>
+              <p>Seconds</p>
+            </div>
+          </div>
+          <div id="wedding-message" class="text-2xl hidden">
+            Today is our wedding day
+            <i class="fa-regular fa-heart text-[#a69277]"></i>
+          </div>
+        </div>
+
+        <!-- color palette -->
+        <div
+          class="flex flex-col mt-5 justify-center items-center text-[#a69277] font-bold"
+        >
+          <h2
+            class="text-3xl mb-5 shadow-2xl border-2 border-[#F5E7D8] bg-[#F5E7D8] hover:scale-110 transition-all duration-500 rounded-2xl p-5 my-2"
+          >
+            Dress code
+          </h2>
+          <div class="flex gap-5">
+            <div
+              class="rounded-full border-2 w-[50px] h-[50px] bg-[#FFE5E4]"
+            ></div>
+            <div
+              class="rounded-full border-2 w-[50px] h-[50px] bg-[#EFC1BC]"
+            ></div>
+            <div
+              class="rounded-full border-2 w-[50px] h-[50px] bg-[#AF8C81]"
+            ></div>
+            <div
+              class="rounded-full border-2 w-[50px] h-[50px] bg-[#8E907B]"
+            ></div>
+            <div
+              class="rounded-full border-2 w-[50px] h-[50px] bg-[#666A54]"
+            ></div>
+          </div>
+        </div>
+        <!-- contact -->
+        <form id="messageForm">
+          <div
+            class="mt-5 flex flex-col items-center justify-center w-[90%] mx-auto rounded-2xl text-[#a69277] font-bold bg-[#F5E7D8]"
+          >
+            <h2
+              class="text-3xl shadow-2xl hover:scale-110 transition-all duration-500 rounded-2xl p-5 my-2"
+            >
+              leave us a message <i class="fa-regular fa-message"></i>
+            </h2>
+            <div
+              class="flex flex-col gap-5 py-3 w-full justify-center items-center"
+            >
+              <input
+                id="userName"
+                type="text"
+                placeholder="Your name"
+                class="border-2 border-[#a69277] w-1/2 rounded-2xl px-5 py-2 text-2xl"
+                autocomplete="off"
+              />
+              <p class="text-xl hidden" id="nameError">
+                please write your name before send
+              </p>
+              <textarea
+                id="userMessage"
+                placeholder="Your message"
+                class="border-2 border-[#a69277] w-1/2 rounded-2xl py-2 px-5 text-2xl"
+              ></textarea>
+              <p class="text-xl hidden" id="messageError">
+                please write your message before send
+              </p>
+              <button
+                type="submit"
+                class="border-2 cursor-pointer text-2xl shadow-2xl p-3 rounded-2xl"
+              >
+                send
+              </button>
+              <p id="success" class="hidden text-xl">
+                Message send successfully, thank you
+                <i class="fa-regular fa-heart text-[#a69277]"></i>
+              </p>
+              <p id="filed" class="text-xl hidden">filed try again</p>
+            </div>
+          </div>
+        </form>
+        <!-- footer -->
+        <div class="flex justify-center items-center gap-1 bg-[#F5E7D8] mt-7">
+          <h4 class="py-3 text-[#a69277] font-bold text-2xl">
+            we can't wait to celebrate with you
+          </h4>
+          <i class="fa-regular fa-heart text-[#a69277]"></i>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

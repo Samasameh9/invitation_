@@ -1,0 +1,96 @@
+@import "tailwindcss";
+body {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.relative {
+  perspective: 1200px;
+}
+#topFlap,
+#bottomFlap,
+#leftFlap,
+#rightFlap {
+  position: absolute;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+#topFlap {
+  transform-origin: top;
+}
+
+#bottomFlap {
+  transform-origin: bottom;
+}
+
+#leftFlap {
+  transform-origin: left;
+}
+
+#rightFlap {
+  transform-origin: right;
+}
+
+.open #topFlap {
+  transform: rotateX(-180deg);
+  transition-delay: 0s;
+}
+
+.open #leftFlap {
+  transform: rotateY(-180deg);
+  transition-delay: 0.4s;
+}
+
+.open #rightFlap {
+  transform: rotateY(180deg);
+  transition-delay: 0.8s;
+}
+
+.open #bottomFlap {
+  transform: rotateX(180deg);
+  transition-delay: 1.2s;
+}
+#card {
+  opacity: 1;
+  transition: all 0.5s ease 0.6s;
+  transform: scale(1);
+}
+.open #card {
+  transform: scale(0);
+  opacity: 0;
+}
+#clickedButton {
+  transition: all 0.5s ease;
+}
+
+.open #clickedButton {
+  transform: scale(0);
+  opacity: 0;
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+input,
+textarea {
+  border: 2px solid #a69277;
+  padding: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+input:focus,
+textarea:focus {
+  border-color: #E6D8C8;
+}
+
+
+
