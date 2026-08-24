@@ -309,6 +309,9 @@
   .inline-flex {
     display: inline-flex;
   }
+  .table {
+    display: table;
+  }
   .size-4 {
     width: calc(var(--spacing) * 4);
     height: calc(var(--spacing) * 4);
@@ -324,6 +327,12 @@
   }
   .h-180 {
     height: calc(var(--spacing) * 180);
+  }
+  .h-\[40px\] {
+    height: 40px;
+  }
+  .h-\[45px\] {
+    height: 45px;
   }
   .h-\[50px\] {
     height: 50px;
@@ -343,8 +352,17 @@
   .\!w-2\.5 {
     width: calc(var(--spacing) * 2.5) !important;
   }
+  .w-1 {
+    width: var(--spacing);
+  }
   .w-1\/2 {
     width: calc(1 / 2 * 100%);
+  }
+  .w-\[40px\] {
+    width: 40px;
+  }
+  .w-\[45px\] {
+    width: 45px;
   }
   .w-\[50px\] {
     width: 50px;
@@ -370,20 +388,35 @@
   .flex-none {
     flex: none;
   }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
   .shrink {
     flex-shrink: 1;
   }
   .shrink-0 {
     flex-shrink: 0;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .grow {
     flex-grow: 1;
+  }
+  .basis-5 {
+    flex-basis: calc(var(--spacing) * 5);
   }
   .basis-5\/12 {
     flex-basis: calc(5 / 12 * 100%);
   }
+  .basis-7 {
+    flex-basis: calc(var(--spacing) * 7);
+  }
   .basis-7\/12 {
     flex-basis: calc(7 / 12 * 100%);
+  }
+  .border-collapse {
+    border-collapse: collapse;
   }
   .\[transform-origin\:center\] {
     transform-origin: center;
@@ -393,6 +426,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -411,6 +447,9 @@
   }
   .gap-1 {
     gap: var(--spacing);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
@@ -447,6 +486,10 @@
   .rounded-t-none {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-2 {
     border-style: var(--tw-border-style);
@@ -534,6 +577,9 @@
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
+  .py-1 {
+    padding-block: var(--spacing);
+  }
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
   }
@@ -563,6 +609,9 @@
   }
   .pt-0 {
     padding-top: 0;
+  }
+  .pt-1 {
+    padding-top: var(--spacing);
   }
   .pt-1\.5 {
     padding-top: calc(var(--spacing) * 1.5);
@@ -634,12 +683,19 @@
   .text-current {
     color: currentcolor;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .opacity-70 {
     opacity: 70%;
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
@@ -904,6 +960,11 @@ input:focus, textarea:focus {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -951,6 +1012,7 @@ input:focus, textarea:focus {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-scale-x: 1;
